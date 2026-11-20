@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Clone — iPhone, Mac, Watch & More</title>
+  <link rel="stylesheet" href="apple.css" />
+</head>
+<body>
+  <!-- Global Navigation -->
+  <header class="global-nav" id="globalNav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Apple">
+        <svg viewBox="0 0 170 170" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.13-1.9-14.34-6.08-3.69-3.03-7.61-7.8-11.77-14.32-5.04-7.92-9.18-17.11-12.42-27.57-3.24-10.46-4.86-20.59-4.86-30.38 0-11.36 2.82-20.66 8.46-27.9 5.64-7.24 12.69-10.97 21.15-11.19 4.24 0 9.13 1.28 14.66 3.84 5.53 2.56 9.08 3.86 10.65 3.9 1.23 0 5.13-1.52 11.7-4.56 6.57-3.04 12.11-4.35 16.62-3.92 12.32.99 21.58 5.86 27.78 14.61-11.02 6.68-16.45 16.02-16.29 28.02.15 9.35 3.56 17.13 10.23 23.34 4.8 4.48 10.35 7.28 16.65 8.4-1.34 4.08-2.82 8.01-4.44 11.79zM119.22 32.14c0 7.36-2.69 14.23-8.07 20.61-6.48 7.57-14.33 11.94-22.87 11.26-.11-.89-.17-1.84-.17-2.85 0-7.07 3.08-14.63 8.56-20.83 2.74-3.13 6.22-5.73 10.44-7.8 4.22-2.07 8.21-3.19 11.97-3.36.1.99.14 1.99.14 3z"/>
+        </svg>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#store">Store</a>
+        <a href="#mac">Mac</a>
+        <a href="#ipad">iPad</a>
+        <a href="#iphone-pro">iPhone</a>
+        <a href="#watch">Watch</a>
+        <a href="#airpods">AirPods</a>
+        <a href="#tv-home">TV &amp; Home</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#accessories">Accessories</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggleBtn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="icon-btn bag-btn" id="bagToggleBtn" aria-label="Shopping Bag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 7h12l1 13H5L6 7z"></path>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+          </svg>
+          <span class="bag-count" id="bagCount">0</span>
+        </button>
+
+        <button class="icon-btn burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Dropdown Bar -->
+    <div class="search-drawer" id="searchDrawer">
+      <div class="search-inner">
+        <input type="text" id="searchInput" placeholder="Search apple.com (e.g. iPhone 18 Pro, MacBook, Watch)..." autocomplete="off" />
+        <button class="close-drawer-btn" id="closeSearchBtn">Cancel</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero 1: Dark -->
+    <section class="hero hero-dark reveal" id="iphone-pro">
+      <div class="hero-content">
+        <h1 class="hero-title">iPhone 18 Pro</h1>
+        <p class="hero-subtitle">Pro further. Titanium precision and next-gen camera intelligence.</p>
+        <div class="hero-cta">
+          <a href="#details-modal" class="btn btn-primary open-modal-btn" data-product="iPhone 18 Pro" data-price="1099">Learn more</a>
+          <button class="btn btn-outline-light add-bag-btn" data-name="iPhone 18 Pro" data-price="1099">Buy — $1,099</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1800&q=85"
+          alt="iPhone Pro titanium smartphone on dark background"
+          loading="eager"
+        />
+      </div>
+    </section>
+
+    <!-- Hero 2: Light -->
+    <section class="hero hero-light reveal" id="mac">
+      <div class="hero-content">
+        <h2 class="hero-title">MacBook Pro</h2>
+        <p class="hero-subtitle">Supercharged for pro workflows and all-day battery life.</p>
+        <div class="hero-cta">
+          <a href="#details-modal" class="btn btn-primary open-modal-btn" data-product="MacBook Pro" data-price="1999">Learn more</a>
+          <button class="btn btn-outline-dark add-bag-btn" data-name="MacBook Pro" data-price="1999">Buy — $1,999</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1800&q=85"
+          alt="MacBook Pro aluminum laptop on clean desk"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Hero 3: Dark -->
+    <section class="hero hero-dark reveal" id="watch">
+      <div class="hero-content">
+        <h2 class="hero-title">Apple Watch Series</h2>
+        <p class="hero-subtitle">Smarter health insights. Brighter display. Built for every move.</p>
+        <div class="hero-cta">
+          <a href="#details-modal" class="btn btn-primary open-modal-btn" data-product="Apple Watch" data-price="429">Learn more</a>
+          <button class="btn btn-outline-light add-bag-btn" data-name="Apple Watch" data-price="429">Buy — $429</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1800&q=85"
+          alt="Smartwatch closeup with dark aesthetic"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Promo Grid (2 columns on desktop) -->
+    <section class="promo-grid" id="store">
+      <article class="promo-card promo-light reveal" id="ipad">
+        <div class="promo-content">
+          <h3 class="promo-title">iPad Air</h3>
+          <p class="promo-subtitle">Light. Bright. Full of potential.</p>
+          <div class="promo-cta">
+            <a href="#details-modal" class="btn btn-primary btn-sm open-modal-btn" data-product="iPad Air" data-price="599">Learn more</a>
+            <button class="btn btn-outline-dark btn-sm add-bag-btn" data-name="iPad Air" data-price="599">Buy</button>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=1200&q=80"
+          alt="Tablet device on minimalist surface"
+          loading="lazy"
+        />
+      </article>
+
+      <article class="promo-card promo-dark reveal" id="airpods">
+        <div class="promo-content">
+          <h3 class="promo-title">AirPods</h3>
+          <p class="promo-subtitle">Adaptive Audio. Effortless clarity.</p>
+          <div class="promo-cta">
+            <a href="#details-modal" class="btn btn-primary btn-sm open-modal-btn" data-product="AirPods" data-price="249">Learn more</a>
+            <button class="btn btn-outline-light btn-sm add-bag-btn" data-name="AirPods" data-price="249">Buy</button>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=1200&q=80"
+          alt="Wireless earbuds in charging case"
+          loading="lazy"
+        />
+      </article>
+
+      <article class="promo-card promo-dark reveal" id="tv-home">
+        <div class="promo-content">
+          <h3 class="promo-title">Home &amp; Audio</h3>
+          <p class="promo-subtitle">Room-filling sound and connected living.</p>
+          <div class="promo-cta">
+            <a href="#details-modal" class="btn btn-primary btn-sm open-modal-btn" data-product="HomePod Audio" data-price="299">Learn more</a>
+            <button class="btn btn-outline-light btn-sm add-bag-btn" data-name="HomePod Audio" data-price="299">Buy</button>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?auto=format&fit=crop&w=1200&q=80"
+          alt="Modern home speaker setup"
+          loading="lazy"
+        />
+      </article>
+
+      <article class="promo-card promo-light reveal" id="accessories">
+        <div class="promo-content">
+          <h3 class="promo-title">Accessories &amp; Trade In</h3>
+          <p class="promo-subtitle">Get credit toward a new device.</p>
+          <div class="promo-cta">
+            <a href="#details-modal" class="btn btn-primary btn-sm open-modal-btn" data-product="MagSafe & Trade In" data-price="99">Explore</a>
+            <button class="btn btn-outline-dark btn-sm add-bag-btn" data-name="MagSafe Accessory" data-price="99">Add to Bag</button>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=1200&q=80"
+          alt="Minimalist desk accessories and mouse"
+          loading="lazy"
+        />
+      </article>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="global-footer" id="support">
+    <div class="footer-inner">
+      <p class="footer-note">
+        1. Pricing, features, and availability shown here are for demonstration/UI clone purposes.
+        2. Trade-in values vary based on condition, year, and configuration of your eligible trade-in device.
+      </p>
+
+      <div class="footer-columns" id="footerColumns">
+        <div class="footer-col">
+          <h4>Shop and Learn <span class="col-plus">+</span></h4>
+          <ul>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#mac">Mac</a></li>
+            <li><a href="#ipad">iPad</a></li>
+            <li><a href="#iphone-pro">iPhone</a></li>
+            <li><a href="#watch">Watch</a></li>
+            <li><a href="#airpods">AirPods</a></li>
+            <li><a href="#tv-home">TV &amp; Home</a></li>
+            <li><a href="#accessories">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services <span class="col-plus">+</span></h4>
+          <ul>
+            <li><a href="#entertainment">Apple Music</a></li>
+            <li><a href="#entertainment">Apple TV+</a></li>
+            <li><a href="#entertainment">Apple Fitness+</a></li>
+            <li><a href="#entertainment">iCloud+</a></li>
+            <li><a href="#store">Apple Wallet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account <span class="col-plus">+</span></h4>
+          <ul>
+            <li><a href="#support">Manage Your Apple Account</a></li>
+            <li><a href="#store">Apple Store Account</a></li>
+            <li><a href="#entertainment">iCloud.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Apple Values <span class="col-plus">+</span></h4>
+          <ul>
+            <li><a href="#support">Accessibility</a></li>
+            <li><a href="#support">Environment</a></li>
+            <li><a href="#support">Privacy</a></li>
+            <li><a href="#support">Supply Chain Innovation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Apple UI Clone. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sales and Refunds</a>
+          <a href="#">Legal</a>
+          <a href="#">Site Map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Bag Drawer -->
+  <aside class="bag-drawer" id="bagDrawer" aria-hidden="true">
+    <div class="bag-header">
+      <h3>Your Bag</h3>
+      <button class="close-drawer-btn" id="closeBagBtn">✕</button>
+    </div>
+    <div class="bag-items" id="bagItems"></div>
+    <div class="bag-footer">
+      <div class="bag-total-row">
+        <span>Total</span>
+        <strong id="bagTotal">$0</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- Product Info Modal -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn">✕</button>
+      <h3 id="modalTitle">Product</h3>
+      <p id="modalDesc">Precision engineering, seamless ecosystem integration, and all-day performance.</p>
+      <p class="modal-price" id="modalPrice">$0</p>
+      <button class="btn btn-primary" id="modalAddBtn">Add to Bag</button>
+    </div>
+  </div>
+
+  <script src="apple.js"></script>
+</body>
+</html>
